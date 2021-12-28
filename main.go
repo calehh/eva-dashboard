@@ -139,7 +139,6 @@ func LoadSubmitCount(db *leveldb.DB) {
 			requestErr := false
 			for _, url := range RpcUrl {
 				c, err := GetLastSubmitCount(url)
-				fmt.Println(c)
 				if err != nil {
 					log.Error("Get last submit count err", "url", url, "err", err)
 					requestErr = true
